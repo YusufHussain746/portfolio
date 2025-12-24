@@ -47,28 +47,16 @@ export default function AboutPage() {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I&apos;m a Software Developer and Machine Learning Engineer based
-              in Bahrain, passionate about building intelligent systems that
-              bridge AI and real-world applications. With experience across the
-              full stack and a deep focus on AI/ML, I specialize in creating
-              production-ready solutions for enterprise environments.
+              Software Developer and Machine Learning Engineer based in Bahrain.
+              I build intelligent systems that bridge AI with real-world
+              applications—from RAG chatbots and fraud detection to document
+              intelligence pipelines.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              My journey in tech started at Bahrain Polytechnic, where I
-              developed a strong foundation in programming and software
-              engineering. Since then, I&apos;ve had the opportunity to work on
-              diverse projects ranging from Retrieval-Augmented Generation (RAG)
-              chatbots to fraud detection systems using machine learning.
-            </p>
-
-            <p className="text-muted-foreground leading-relaxed">
-              Currently at RAINCODE, I&apos;m building production-ready AI
-              systems for core banking, including intelligent chatbots with
-              agentic capabilities, document intelligence pipelines, and
-              Know-Your-Customer (KYC) systems. I enjoy tackling complex
-              problems that require both technical depth and creative
-              problem-solving.
+              I specialize in full-stack development and production-ready ML
+              solutions for enterprise environments, with a focus on banking and
+              fintech domains.
             </p>
           </div>
 
