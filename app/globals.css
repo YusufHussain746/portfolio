@@ -159,3 +159,8 @@ html.dark {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

@@ -8,8 +8,8 @@ export const siteConfig = {
   phone: "+973 3835 0098",
   location: "Manama, Bahrain",
   links: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/YusufHussain746",
+    linkedin: "https://www.linkedin.com/in/yousif-ahmed-1436761b7",
   },
   nav: [
     { name: "Home", href: "/" },

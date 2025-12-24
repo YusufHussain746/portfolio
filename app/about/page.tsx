@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { Download, MapPin, Mail, Phone } from "lucide-react";
+import { Download, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -19,17 +20,28 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight">About Me</h1>
-            <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
-              <span className="flex items-center gap-1">
-                <MapPin className="h-4 w-4" />
-                {siteConfig.location}
-              </span>
-              <span className="flex items-center gap-1">
-                <Mail className="h-4 w-4" />
-                {siteConfig.email}
-              </span>
+          <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-border shrink-0">
+              <Image
+                src="/image.png"
+                alt="Yusuf Husain Ahmed"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tight">About Me</h1>
+              <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <MapPin className="h-4 w-4" />
+                  {siteConfig.location}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Mail className="h-4 w-4" />
+                  {siteConfig.email}
+                </span>
+              </div>
             </div>
           </div>
 

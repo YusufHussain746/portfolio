@@ -57,25 +57,31 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px]">
-              <SheetTitle className="text-left">Navigation</SheetTitle>
-              <nav className="flex flex-col gap-4 mt-8">
-                {siteConfig.nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className={cn(
-                      "text-lg font-medium transition-colors hover:text-primary",
-                      pathname === item.href
-                        ? "text-primary"
-                        : "text-muted-foreground"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </nav>
+            <SheetContent side="right" className="w-full max-w-[300px] p-0">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between p-4 border-b border-border">
+                  <SheetTitle className="text-lg font-semibold">
+                    <span className="text-primary">Y</span>usuf
+                  </SheetTitle>
+                </div>
+                <nav className="flex flex-col p-4">
+                  {siteConfig.nav.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        "flex items-center py-3 text-base font-medium transition-colors hover:text-primary border-b border-border/50 last:border-0",
+                        pathname === item.href
+                          ? "text-primary"
+                          : "text-foreground"
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </nav>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

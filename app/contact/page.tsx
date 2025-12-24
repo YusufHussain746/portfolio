@@ -73,7 +73,7 @@ export default function ContactPage() {
                     {siteConfig.phone}
                   </Link>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Available during business hours (GMT+3)
+                    Fastest way to get in touch
                   </p>
                 </CardContent>
               </Card>
