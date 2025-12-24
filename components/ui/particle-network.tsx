@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { useTheme } from "next-themes";
 
 interface Particle {
@@ -28,12 +28,22 @@ export function ParticleNetwork({
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const animationFrameRef = useRef<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const actualParticleCount = isMobile ? 40 : particleCount;
 
   const initParticles = useCallback(
     (width: number, height: number) => {
       const particles: Particle[] = [];
-      for (let i = 0; i < particleCount; i++) {
+      for (let i = 0; i < actualParticleCount; i++) {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
@@ -44,7 +54,7 @@ export function ParticleNetwork({
       }
       particlesRef.current = particles;
     },
-    [particleCount, particleSpeed]
+    [actualParticleCount, particleSpeed]
   );
 
   useEffect(() => {
